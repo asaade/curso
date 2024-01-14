@@ -1,0 +1,192 @@
+:PROPERTIES:
+:ID:       fb263d0c-23e3-4211-93d0-97fb42ed300e
+:END:
+#+title: Utilidad y veracidad
+:config:
+#+language: es
+#+reveal_hlevel: 1
+#+options: toc:nil num:nil reveal_width:1400 reveal_height:1000
+#+reveal_theme: serif
+#+reveal_trans: slide
+#+reveal_plugins: (notes search zoom math)
+#+reveal_add_plugin: menu RevealMenu plugin/menu/menu.js
+:end:
+
+* Contenido
+1. /Todos los gráficos mienten, pero algunos son útiles (Parafraseando a George Cox, quien se refería a que todos los modelos matemáticos son erróneos)/
+
+2. /No todas las mentiras son iguales/
+
+* Objetividad y precisión
+- Un gráfico es muy útil para transmitir información de manera sucinta y persuasiva.
+- Como los números que los nutren, los gráficos nos parecen objetivos, fríos, precisos, concretos. Mucho más que solo palabras.
+
+
+*O al menos eso es lo que pensamos.*
+
+* En el mundo real
+
+Los números y los gráficos nos impactan todos los días, y no solamente en las áreas técnicas y académicas.
+
+En ambientes más cotidianos, políticos y publicistas buscan convencernos de las bondades de una nueva política pública, del desempeño de la economía o de las maravillas que puede hacer un dentífrico por nuestra salud bucal.
+
+** Para gatos
+
+- 8 de cada 10 gatos prefieren Whiskas
+
+#+attr_html: :width 500
+[[file:fig/Whiskas.jpg]]
+
+** Inflación
+
+- La inflación ha bajado. En el último mes, el INPC  alcanzó el 4,32% anualizado (Banco de México)
+
+#+attr_html: :width 750
+[[file:fig/Inflación_México.png]]
+
+** Calentamiento global
+
+- Las emisiones de CO_{2} siguen aumentando (New York Times).
+
+#+attr_html: :width 750
+[[file:fig/CO2Emissions.png]]
+
+* ¿Los números son objetivos?
+
+Los últimos años están repletos de casos de falsificación escandalosos.
+- Diederik Stapel de la U. de Tilburg en Holanda y Bengü Sezen de la U. de Columbia en los EUA falsificaron sus encuestas.
+- Elizabeth Holmes echó mano de todo truco disponible para sacar adelante a una empresa (Theranos) que basaba su éxito en una máquina de detección de enfermedades que no funcionaba.
+
+** Por cierto
+
+Una sentencia reciente en Chile condenó a la empresa Whiskas por competencia desleal y confirmó que su publicidad no se acompaña por ningún estudio serio y "no se sustenta en antecedentes objetivos y verificables". ¿Será que nadie le preguntó a los gatos? (https://www.lanacion.cl/tribunal-fallo-que-publicidad-8-de-cada-10-gatos-prefieren-whiskas-es-competencia-desleal/)
+
+* Cómo mienten los gráficos
+
+Estos casos extremos no son únicos ni se requiere llegar a tanto para engañar o confundir.
+
+Muchas veces basta con mucho menos.
+
+Aquí hay algunos ejemplos.
+
+** La escala
+
+*** Alberto Cairo, /How charts lie/
+
+#+attr_html: :width 750
+[[file:fig/abortion_wrong.png]]
+
+*** Mejor así
+#+attr_html: :width 750
+[[file:fig/abortion_better.jpg]]
+
+*** Más duplicidades - Cairo
+
+#+attr_html: :width 850
+[[file:fig/escala.jpg]]
+
+*** Aquí está de nuevo, corregida
+
+#+attr_html: :width 850
+[[file:fig/escala-2.jpg]]
+
+*** En estas barras falta algo
+#+attr_html: :width 850
+[[file:fig/Aqui falta algo.jpg]]
+*** Ya lo encontramos
+
+#+attr_html: :width 850
+[[file:fig/Aqui falta algo-2.jpg]]
+
+*** En busca del tiempo perdido - Tufte, /The visual display of quantitative information/
+
+#+attr_html: :width 850
+[[file:fig/Escalas heterogéneas.png]]
+*** Aún más obvios - Tufte
+
+#+attr_html: :width 650
+[[file:fig/perdido.png]]
+*** Las unidades también son escalas
+
+#+attr_html: :width 850
+[[file:fig/unidades.jpg]]
+
+*** Per cápita
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+[[file:fig/percapita.png]]
+
+[[file:fig/percapita-2.png]]
+#+reveal_html: </div>
+
+** La forma
+
+*** Tercera dimensión y perspectiva - Tufte
+
+#+attr_html: :width 1050
+[[file:fig/tercera dimension y perspectiva.png]]
+
+*** Incluso así es mejor
+
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+[[file:fig/tercera dimension y perspectiva-2.png]]
+
+[[file:fig/Escalas heterogéneas-2.png]]
+#+reveal_html: </div>
+*** La perspectiva equivocada - Cairo
+
+#+attr_html: :width 750
+[[file:fig/tercera dimension y perspectiva-3.png]]
+
+*** Sin palabras
+
+#+attr_html: :width 750
+[[file:fig/Kansas.png]]
+
+*** El reparto de las rebanadas - Stephen Few, /Show me the numbers/
+#+attr_html: :width 750
+[[file:fig/pie-1.png]]
+
+*** El problema de varias dimensiones
+
+#+attr_html: :width 650
+[[file:fig/barriles.png]]
+
+*** El reparto de las rebanadas (2)
+
+#+attr_html: :width 750
+[[file:fig/pie.png]]
+
+*** Una serie, una dimensión
+
+#+attr_html: :width 750
+[[file:fig/pie-3.png]]
+
+** El contexto
+*** Información insuficiente - Cairo
+
+#+attr_html: :width 750
+[[file:fig/daca-1.jpg]]
+
+Media verdad es una mentira
+
+*** A veces se necesita más
+
+#+attr_html: :width 750
+[[file:fig/daca-2.jpg]]
+
+*** Un viejo conocido
+
+#+attr_html: :width 750
+[[file:fig/abortion_better-2.jpg]]
+
+*** Contexto, contexto, contexto... Algo familiar, algo emocional
+
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+[[file:fig/FACTI.png]]
+
+[[file:fig/FACTI-2.png]]
+#+reveal_html: </div>
+
+Panel FACTI (ONU). Informe final
+
+* Conclusiones

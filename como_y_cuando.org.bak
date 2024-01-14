@@ -1,0 +1,149 @@
+:PROPERTIES:
+:ID:       fbcf1c1c-ba04-4c4f-8775-95ac3ac70390
+:END:
+#+title: Cómo y cuándo
+#+author: Antonio Saade
+#+date: [2024-01-07 dom]
+#+last_modified:  2024/01/08 10:47:46
+:config:
+#+language: es
+#+reveal_hlevel: 1
+#+options: toc:nil num:nil reveal_width:1400 reveal_height:1000 email:nil
+#+reveal_theme: serif
+#+reveal_trans: slide
+#+reveal_add_plugin: menu RevealMenu plugin/menu/menu.js
+:end:
+
+* ¡Mira mamá, tengo una computadora! - Stephen Few
+
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+[[file:fig/miramama.png]]
+
+#+attr_html: :width 750
+[[file:fig/red.png]]
+#+reveal_html: </div>
+
+* De vuelta a lo básico
+
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+
+[[file:fig/tabla_tufte.png]]
+#+attr_html: :width 750
+[[file:fig/red-1.png]]
+#+reveal_html: </div>
+
+* Tabla vs. Gráfico
+
+| Tabla                                                            | Gráfico                            |
+| Valores individuales                                             | Patrones, tendencias y excepciones |
+| Valores únicos (no series)                                       | Series completas                   |
+| Valores precisos                                                 |                                    |
+| Más de una unidad de medida                                      |                                    |
+| Varios niveles de agregación (p.ej. montos y total) |                                    |
+
+
+* Un dato, dos datos, muchos datos
+
+A veces se necesita menos detalle y más información agregada.
+
+#+attr_html: :width 950
+[[file:fig/inversion-LAC.png]]
+* Cientos de datos - Edward Tufte
+#+attr_html: :width 1050
+[[file:fig/cientos.png]]
+* Comparaciones - Tufte
+#+attr_html: :width 500
+[[file:fig/comparizon.png]]
+
+* Análisis y exploración - El Cuarteto de Anscombe
+
+#+attr_html: :width 950
+[[file:fig/Anscombe_quartet.svg.png]]
+* ... y el Datasaurio
+
+#+begin_src R :results output
+library(datasauRus)
+library(ascii)
+if(requireNamespace("dplyr")){
+  suppressPackageStartupMessages(library(dplyr))
+  data <- datasaurus_dozen %>%
+    group_by(dataset) %>%
+    summarize(
+      mean_x    = mean(x),
+      mean_y    = mean(y),
+      std_dev_x = sd(x),
+      std_dev_y = sd(y),
+      corr_x_y  = cor(x, y)
+    )
+}
+c <- "Estadísticos del 'Datasaurio' y 12 series más"
+data <-ascii(data,header=T,digits=1, decimal.mark = ",",include.colnames=T) #,caption=c)
+print(data, type="org")
+#+end_src
+
+#+caption: Estadísticos del 'Datasaurio'
+#+RESULTS[f623c12af2bf1ad5b49e5ad0638df8d55389d75c]:
+|    | dataset    | mean_x | mean_y | std_dev_x | std_dev_y | corr_x_y |
+|----+------------+--------+--------+-----------+-----------+----------|
+|  1 | away       |   54.3 |   47.8 |      16.8 |      26.9 |     -0.1 |
+|  2 | bullseye   |   54.3 |   47.8 |      16.8 |      26.9 |     -0.1 |
+|  3 | circle     |   54.3 |   47.8 |      16.8 |      26.9 |     -0.1 |
+|  4 | dino       |   54.3 |   47.8 |      16.8 |      26.9 |     -0.1 |
+|  5 | dots       |   54.3 |   47.8 |      16.8 |      26.9 |     -0.1 |
+|  6 | h_lines    |   54.3 |   47.8 |      16.8 |      26.9 |     -0.1 |
+|  7 | high_lines |   54.3 |   47.8 |      16.8 |      26.9 |     -0.1 |
+|  8 | slant_down |   54.3 |   47.8 |      16.8 |      26.9 |     -0.1 |
+|  9 | slant_up   |   54.3 |   47.8 |      16.8 |      26.9 |     -0.1 |
+| 10 | star       |   54.3 |   47.8 |      16.8 |      26.9 |     -0.1 |
+| 11 | v_lines    |   54.3 |   47.8 |      16.8 |      26.9 |     -0.1 |
+| 12 | wide_lines |   54.3 |   47.8 |      16.8 |      26.9 |     -0.1 |
+| 13 | x_shape    |   54.3 |   47.8 |      16.8 |      26.9 |     -0.1 |
+
+* Algunos gráficos del Datasaurio
+
+#+begin_src R :file fig/datasaurio.png :results graphics file
+library(datasauRus)
+if(requireNamespace("ggplot2")){
+  library(ggplot2)
+  ggplot(datasaurus_dozen, aes(x = x, y = y))+
+    geom_point()+
+    theme_void()+
+    theme(legend.position = "none")+
+    facet_wrap(~dataset, ncol = 3)
+}
+#+end_src
+
+#+attr_html: :width 750
+#+caption: Los gráficos del 'Datasaurio'
+#+RESULTS[d836af2a5608d0df8385e38f338c8f42fe93b4a5]:
+[[file:fig/datasaurio.png]]
+
+* Algo más útil
+
+#+begin_src R :file fig/coorplot.png :results graphics file
+my_data <- mtcars[, c(1,3,4,5,6,7)]
+library(GGally)
+ggpairs(my_data)
+#+end_src
+
+#+attr_html: :width 750
+#+RESULTS[d30798b4c2cb54d0f40c39048acebc74880fd499]:
+[[file:fig/coorplot.png]]
+
+* Otra vez
+
+#+begin_src R :file fig/matriz.png :results graphics file :cache no
+library(ggcorrplot)
+data(mtcars)
+corr <- round(cor(mtcars), 1)
+head(corr[, 1:6])
+ggcorrplot(corr, hc.order = TRUE, type = "lower",
+   lab = TRUE)
+#+end_src
+
+#+attr_html: :width 750
+#+results[ec9762c109b8ad679042c94c88a93458ac704777]:
+[[file:fig/matriz.png]]
+# Local Variables:
+# org-html-head: "<script type=\"text/javascript\" src=\"https://livejs.com/live.js\"></script>"
+# End:

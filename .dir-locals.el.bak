@@ -1,0 +1,5 @@
+((org-mode . ((eval . (add-hook 'after-save-hook
+                                (lambda ()
+                                  (org-babel-execute-buffer)
+                                  (org-re-reveal-export-to-html))
+                                :append :local)))))

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<title>Cómo y cuándo</title>
+<meta name="author" content="Antonio Saade"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="file:///home/asaade/emacs.options/doom-emacs/.local/straight/build-29.1/revealjs/dist/reveal.css"/>
+
+<link rel="stylesheet" href="file:///home/asaade/emacs.options/doom-emacs/.local/straight/build-29.1/revealjs/dist/theme/serif.css" id="theme"/>
+<script type="text/javascript" src="https://livejs.com/live.js"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide">
+<h1 class="title">Cómo y cuándo</h1><h2 class="author">Antonio Saade</h2>
+</section>
+
+<section>
+<section id="slide-orga364aff">
+<h2 id="orga364aff">¡Mira mamá, tengo una computadora! - Stephen Few</h2>
+<div style="display: grid; grid-template-columns: auto auto;">
+
+<div id="orgb379ac2" class="figure">
+<p><img src="fig/miramama.png" alt="miramama.png" />
+</p>
+</div>
+
+
+<div id="org8460479" class="figure">
+<p><img src="fig/red.png" alt="red.png" width="750" />
+</p>
+</div>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgf60607b">
+<h2 id="orgf60607b">De vuelta a lo básico</h2>
+<div style="display: grid; grid-template-columns: auto auto;">
+
+
+<div id="org17dec12" class="figure">
+<p><img src="fig/tabla_tufte.png" alt="tabla_tufte.png" />
+</p>
+</div>
+
+<div id="org2dae248" class="figure">
+<p><img src="fig/red-1.png" alt="red-1.png" width="750" />
+</p>
+</div>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org67e3ca4">
+<h2 id="org67e3ca4">Tabla vs. Gráfico</h2>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Tabla</th>
+<th scope="col" class="org-left">Gráfico</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Valores individuales</td>
+<td class="org-left">Patrones, tendencias y excepciones</td>
+</tr>
+
+<tr>
+<td class="org-left">Valores únicos (no series)</td>
+<td class="org-left">Series completas</td>
+</tr>
+
+<tr>
+<td class="org-left">Valores precisos</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Más de una unidad de medida</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Diferentes niveles de agregación (p.ej. montos y total)</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section>
+<section id="slide-org14c3bd4">
+<h2 id="org14c3bd4">Un dato, dos datos, muchos datos</h2>
+<p>
+A veces se necesita menos detalle y más información agregada.
+</p>
+
+
+<div id="org97ef0b2" class="figure">
+<p><img src="fig/inversion-LAC.png" alt="inversion-LAC.png" width="950" />
+</p>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org4c7e2c3">
+<h2 id="org4c7e2c3">Cientos de datos - Edward Tufte</h2>
+
+<div id="orga76d41c" class="figure">
+<p><img src="fig/cientos.png" alt="cientos.png" width="1050" />
+</p>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org9f4d48f">
+<h2 id="org9f4d48f">Comparaciones - Tufte</h2>
+
+<div id="orgb278b94" class="figure">
+<p><img src="fig/comparizon.png" alt="comparizon.png" width="500" />
+</p>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org8075c33">
+<h2 id="org8075c33">Análisis y exploración - El Cuarteto de Anscombe</h2>
+
+<div id="org62afb43" class="figure">
+<p><img src="fig/Anscombe_quartet.svg.png" alt="Anscombe_quartet.svg.png" width="950" />
+</p>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org8ed3192">
+<h2 id="org8ed3192">&#x2026; y el Datasaurio</h2>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Tabla 1</span> Estadísticos del &rsquo;Datasaurio&rsquo;</caption>
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">&#xa0;</th>
+<th scope="col" class="org-left">dataset</th>
+<th scope="col" class="org-right">mean_x</th>
+<th scope="col" class="org-right">mean_y</th>
+<th scope="col" class="org-right">std_dev_x</th>
+<th scope="col" class="org-right">std_dev_y</th>
+<th scope="col" class="org-right">corr_x_y</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">away</td>
+<td class="org-right">54.3</td>
+<td class="org-right">47.8</td>
+<td class="org-right">16.8</td>
+<td class="org-right">26.9</td>
+<td class="org-right">-0.1</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-left">bullseye</td>
+<td class="org-right">54.3</td>
+<td class="org-right">47.8</td>
+<td class="org-right">16.8</td>
+<td class="org-right">26.9</td>
+<td class="org-right">-0.1</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">circle</td>
+<td class="org-right">54.3</td>
+<td class="org-right">47.8</td>
+<td class="org-right">16.8</td>
+<td class="org-right">26.9</td>
+<td class="org-right">-0.1</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-left">dino</td>
+<td class="org-right">54.3</td>
+<td class="org-right">47.8</td>
+<td class="org-right">16.8</td>
+<td class="org-right">26.9</td>
+<td class="org-right">-0.1</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-left">dots</td>
+<td class="org-right">54.3</td>
+<td class="org-right">47.8</td>
+<td class="org-right">16.8</td>
+<td class="org-right">26.9</td>
+<td class="org-right">-0.1</td>
+</tr>
+
+<tr>
+<td class="org-right">6</td>
+<td class="org-left">h_lines</td>
+<td class="org-right">54.3</td>
+<td class="org-right">47.8</td>
+<td class="org-right">16.8</td>
+<td class="org-right">26.9</td>
+<td class="org-right">-0.1</td>
+</tr>
+
+<tr>
+<td class="org-right">7</td>
+<td class="org-left">high_lines</td>
+<td class="org-right">54.3</td>
+<td class="org-right">47.8</td>
+<td class="org-right">16.8</td>
+<td class="org-right">26.9</td>
+<td class="org-right">-0.1</td>
+</tr>
+
+<tr>
+<td class="org-right">8</td>
+<td class="org-left">slant_down</td>
+<td class="org-right">54.3</td>
+<td class="org-right">47.8</td>
+<td class="org-right">16.8</td>
+<td class="org-right">26.9</td>
+<td class="org-right">-0.1</td>
+</tr>
+
+<tr>
+<td class="org-right">9</td>
+<td class="org-left">slant_up</td>
+<td class="org-right">54.3</td>
+<td class="org-right">47.8</td>
+<td class="org-right">16.8</td>
+<td class="org-right">26.9</td>
+<td class="org-right">-0.1</td>
+</tr>
+
+<tr>
+<td class="org-right">10</td>
+<td class="org-left">star</td>
+<td class="org-right">54.3</td>
+<td class="org-right">47.8</td>
+<td class="org-right">16.8</td>
+<td class="org-right">26.9</td>
+<td class="org-right">-0.1</td>
+</tr>
+
+<tr>
+<td class="org-right">11</td>
+<td class="org-left">v_lines</td>
+<td class="org-right">54.3</td>
+<td class="org-right">47.8</td>
+<td class="org-right">16.8</td>
+<td class="org-right">26.9</td>
+<td class="org-right">-0.1</td>
+</tr>
+
+<tr>
+<td class="org-right">12</td>
+<td class="org-left">wide_lines</td>
+<td class="org-right">54.3</td>
+<td class="org-right">47.8</td>
+<td class="org-right">16.8</td>
+<td class="org-right">26.9</td>
+<td class="org-right">-0.1</td>
+</tr>
+
+<tr>
+<td class="org-right">13</td>
+<td class="org-left">x_shape</td>
+<td class="org-right">54.3</td>
+<td class="org-right">47.8</td>
+<td class="org-right">16.8</td>
+<td class="org-right">26.9</td>
+<td class="org-right">-0.1</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section>
+<section id="slide-org82d3e30">
+<h2 id="org82d3e30">Algunos gráficos del Datasaurio</h2>
+
+<div id="org9312aa1" class="figure">
+<p><img src="fig/datasaurio.png" alt="datasaurio.png" width="750" />
+</p>
+<p><span class="figure-number">Figura 1: </span>Los gráficos del &rsquo;Datasaurio&rsquo;</p>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orga2d6818">
+<h2 id="orga2d6818">Algo más útil</h2>
+
+<div id="orge67b2cf" class="figure">
+<p><img src="fig/coorplot.png" alt="coorplot.png" width="750" />
+</p>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgeb33482">
+<h2 id="orgeb33482">Otra vez</h2>
+
+<div id="org652af98" class="figure">
+<p><img src="fig/matriz.png" alt="matriz.png" width="750" />
+</p>
+</div>
+</section>
+</section>
+</div>
+</div>
+<script src="file:///home/asaade/emacs.options/doom-emacs/.local/straight/build-29.1/revealjs/dist/reveal.js"></script>
+<script src="file:///home/asaade/emacs.options/doom-emacs/.local/straight/build-29.1/revealjs/plugin/markdown/markdown.js"></script>
+<script src="file:///home/asaade/emacs.options/doom-emacs/.local/straight/build-29.1/revealjs/plugin/notes/notes.js"></script>
+<script src="file:///home/asaade/emacs.options/doom-emacs/.local/straight/build-29.1/revealjs/plugin/math/math.js"></script>
+<script src="file:///home/asaade/emacs.options/doom-emacs/.local/straight/build-29.1/revealjs/plugin/search/search.js"></script>
+<script src="file:///home/asaade/emacs.options/doom-emacs/.local/straight/build-29.1/revealjs/plugin/zoom/zoom.js"></script>
+<script src="file:///home/asaade/emacs.options/doom-emacs/.local/straight/build-29.1/revealjs/plugin/menu/menu.js"></script>
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'c',
+rollingLinks: false,
+keyboard: true,
+mouseWheel: false,
+fragmentInURL: false,
+hashOneBasedIndex: false,
+pdfSeparateFragments: true,
+overview: true,
+width: 1400,
+height: 1000,
+
+transition: 'slide',
+transitionSpeed: 'default',
+
+// Plugins with reveal.js 4.x
+plugins: [ RevealMarkdown, RevealNotes, RevealMath, RevealSearch, RevealZoom, RevealMenu ],
+
+// Optional libraries used to extend reveal.js
+dependencies: [
+]
+
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+:PROPERTIES:
+:ID:       c0b626df-fe3d-4fa5-a6bd-dd4e476574b9
+:END:
+#+title: Tipos de gráficos
+#+author: Antonio Saade
+#+last_modified:  2024/01/12 14:13:22
+:config:
+#+language: es
+#+reveal_hlevel: 1
+#+options: toc:nil num:nil reveal_width:1400 reveal_height:1000
+#+options: reveal_single_file:t email:nil
+#+reveal_theme: white-contrast
+#+reveal_trans: slide
+#+reveal_plugins: (notes search zoom math)
+#+reveal_add_plugin: menu RevealMenu plugin/menu/menu.js
+#+startup: align contents
+:end:
+
+* Importar datos
+
+#+begin_src R :results none :export none
+library(httr2)
+library(readxl)
+library(stringr)
+
+home_page  <- "http://www.infralatam.info"
+file_name  <- "INFRALATAM_[:digit:]{8}.xlsx"
+path       <- "/wp-content/uploads/[:digit:]{4}/[:digit:]{2}/"
+local_path <- "data/"
+full_path  <- paste(home_page, path, file_name, sep='')
+
+url <- request(home_page) %>%
+       req_cache("data", debug = TRUE) %>%
+       req_perform() %>%
+       resp_body_string() %>%
+       str_extract(full_path)
+
+file_name <- paste(local_path, str_extract(url, file_name), sep='')
+download.file(url, quiet=TRUE, destfile = file_name, cacheOK=TRUE)
+data <- read_excel(file_name, skip=3)
+#+end_src
+
+#+begin_src R :results output wrap
+library(ascii)
+
+prn_data<-ascii(head(data, 4), header=T, decimal.mark = ",", include.colnames=T)
+print(prn_data, type="org")
+#+end_src
+
+#+RESULTS[179b2c49e839251b9f732c2d276e14041f7f9828]:
+:results:
+|   | Country   |    Year | Type   | Sector        | Subsector        | National Currency (millons) | USD (millons) | Percentage of GDP |
+|---+-----------+---------+--------+---------------+------------------+-----------------------------+---------------+-------------------|
+| 1 | Argentina | 2008.00 | Public | Total sectors | Total subsectors |                    16200.07 |       5122.03 |              1.40 |
+| 2 | Argentina | 2009.00 | Public | Total sectors | Total subsectors |                    22509.05 |       6035.93 |              1.79 |
+| 3 | Argentina | 2010.00 | Public | Total sectors | Total subsectors |                    32324.92 |       8263.84 |              1.94 |
+| 4 | Argentina | 2011.00 | Public | Total sectors | Total subsectors |                    32149.89 |       7786.05 |              1.47 |
+:end:
