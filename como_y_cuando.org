@@ -4,15 +4,17 @@
 #+title: Cómo y cuándo
 #+author: Antonio Saade
 #+date: [2024-01-07 dom]
-#+last_modified:  2024/01/14 13:54:49
+#+last_modified:  2024/01/14 15:23:54
 :config:
 #+language: es
+#+options: toc:nil num:nil email:nil
 #+reveal_hlevel: 1
-#+options: toc:nil num:nil reveal_width:1400 reveal_height:1000 email:nil
 #+reveal_theme: serif
 #+reveal_trans: slide
-#+reveal_add_plugin: menu RevealMenu plugin/menu/menu.js
-#+startup:  hideblocks contents
+#+reveal_plugins: (highlight menu)
+#+options: reveal_embed_local_resources:t
+#+options: reveal_width:1400 reveal_height:1000
+#+startup: hideblocks contents
 :end:
 
 * ¡Mira mamá, tengo una computadora! - Stephen Few

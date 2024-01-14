@@ -3,17 +3,17 @@
 :END:
 #+title: Tipos de gráficos
 #+author: Antonio Saade
-#+last_modified:  2024/01/12 14:13:22
+#+last_modified:  2024/01/14 15:23:03
 :config:
 #+language: es
+#+options: toc:nil num:nil email:nil
 #+reveal_hlevel: 1
-#+options: toc:nil num:nil reveal_width:1400 reveal_height:1000
-#+options: reveal_single_file:t email:nil
-#+reveal_theme: white-contrast
+#+reveal_theme: serif
 #+reveal_trans: slide
-#+reveal_plugins: (notes search zoom math)
-#+reveal_add_plugin: menu RevealMenu plugin/menu/menu.js
-#+startup: align contents
+#+reveal_plugins: (highlight menu)
+#+options: reveal_embed_local_resources:t
+#+options: reveal_width:1400 reveal_height:1000
+#+startup: hideblocks contents
 :end:
 
 * Importar datos

@@ -4,12 +4,14 @@
 #+title: Utilidad y veracidad
 :config:
 #+language: es
+#+options: toc:nil num:nil email:nil
 #+reveal_hlevel: 1
-#+options: toc:nil num:nil reveal_width:1400 reveal_height:1000
 #+reveal_theme: serif
 #+reveal_trans: slide
-#+reveal_plugins: (notes search zoom math)
-#+reveal_add_plugin: menu RevealMenu plugin/menu/menu.js
+#+reveal_plugins: (highlight search)
+#+options: reveal_single_file:t
+#+options: reveal_width:1400 reveal_height:1000
+#+startup: hideblocks contents
 :end:
 
 * Contenido
@@ -42,14 +44,14 @@ En ambientes más cotidianos, políticos y publicistas buscan convencernos de la
 - La inflación ha bajado. En el último mes, el INPC  alcanzó el 4,32% anualizado (Banco de México)
 
 #+attr_html: :width 750
-[[file:fig/Inflación_México.png]]
+[[file:fig/Inflación_México.jpg]]
 
 ** Calentamiento global
 
 - Las emisiones de CO_{2} siguen aumentando (New York Times).
 
 #+attr_html: :width 750
-[[file:fig/CO2Emissions.png]]
+[[file:fig/CO2Emissions.jpg]]
 
 * ¿Los números son objetivos?
 
@@ -74,7 +76,7 @@ Aquí hay algunos ejemplos.
 *** Alberto Cairo, /How charts lie/
 
 #+attr_html: :width 750
-[[file:fig/abortion_wrong.png]]
+[[file:fig/abortion_wrong.jpg]]
 
 *** Mejor así
 #+attr_html: :width 750
@@ -101,11 +103,11 @@ Aquí hay algunos ejemplos.
 *** En busca del tiempo perdido - Tufte, /The visual display of quantitative information/
 
 #+attr_html: :width 850
-[[file:fig/Escalas heterogéneas.png]]
+[[file:fig/Escalas heterogéneas.jpg]]
 *** Aún más obvios - Tufte
 
 #+attr_html: :width 650
-[[file:fig/perdido.png]]
+[[file:fig/perdido.jpg]]
 *** Las unidades también son escalas
 
 #+attr_html: :width 850
@@ -113,9 +115,9 @@ Aquí hay algunos ejemplos.
 
 *** Per cápita
 #+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
-[[file:fig/percapita.png]]
+[[file:fig/percapita.jpg]]
 
-[[file:fig/percapita-2.png]]
+[[file:fig/percapita-2.jpg]]
 #+reveal_html: </div>
 
 ** La forma
@@ -123,43 +125,43 @@ Aquí hay algunos ejemplos.
 *** Tercera dimensión y perspectiva - Tufte
 
 #+attr_html: :width 1050
-[[file:fig/tercera dimension y perspectiva.png]]
+[[file:fig/tercera dimension y perspectiva.jpg]]
 
 *** Incluso así es mejor
 
 #+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
-[[file:fig/tercera dimension y perspectiva-2.png]]
+[[file:fig/tercera dimension y perspectiva-2.jpg]]
 
-[[file:fig/Escalas heterogéneas-2.png]]
+[[file:fig/Escalas heterogéneas-2.jpg]]
 #+reveal_html: </div>
 *** La perspectiva equivocada - Cairo
 
 #+attr_html: :width 750
-[[file:fig/tercera dimension y perspectiva-3.png]]
+[[file:fig/tercera dimension y perspectiva-3.jpg]]
 
 *** Sin palabras
 
 #+attr_html: :width 750
-[[file:fig/Kansas.png]]
+[[file:fig/Kansas.jpg]]
 
 *** El reparto de las rebanadas - Stephen Few, /Show me the numbers/
 #+attr_html: :width 750
-[[file:fig/pie-1.png]]
+[[file:fig/pie-1.jpg]]
 
 *** El problema de varias dimensiones
 
 #+attr_html: :width 650
-[[file:fig/barriles.png]]
+[[file:fig/barriles.jpg]]
 
 *** El reparto de las rebanadas (2)
 
 #+attr_html: :width 750
-[[file:fig/pie.png]]
+[[file:fig/pie.jpg]]
 
 *** Una serie, una dimensión
 
 #+attr_html: :width 750
-[[file:fig/pie-3.png]]
+[[file:fig/pie-3.jpg]]
 
 ** El contexto
 *** Información insuficiente - Cairo
@@ -182,9 +184,9 @@ Media verdad es una mentira
 *** Contexto, contexto, contexto... Algo familiar, algo emocional
 
 #+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
-[[file:fig/FACTI.png]]
+[[file:fig/FACTI.jpg]]
 
-[[file:fig/FACTI-2.png]]
+[[file:fig/FACTI-2.jpg]]
 #+reveal_html: </div>
 
 Panel FACTI (ONU). Informe final
